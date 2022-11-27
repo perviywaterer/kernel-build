@@ -9,12 +9,11 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: debian-sid
 
     steps:
     - uses: actions/checkout@v3
     - run: sudo add-apt-repository ppa:savoury1
-    - run: sudo echo "\ndeb http://apt.llvm.org/focal/ llvm-toolchain-focal main\ndeb-src http://apt.llvm.org/focal/ llvm-toolchain-focal main\ndeb http://apt.llvm.org/focal/ llvm-toolchain-focal-14 main\ndeb-src http://apt.llvm.org/focal/ llvm-toolchain-focal-14 main\ndeb http://apt.llvm.org/focal/ llvm-toolchain-focal-15 main\ndeb-src http://apt.llvm.org/focal/ llvm-toolchain-focal-15 main" >> /etc/apt/sources.list
     - run: sudo apt update -y
     - run: sudo apt-get install git fakeroot build-essential libarchive-dev  libarchive-tools ncurses-dev xz-utils libssl-dev bc flex libelf-dev bison llvm libncurses-dev gawk flex bison openssl dkms libelf-dev libudev-dev libpci-dev clang lld libiberty-dev autoconf -y
     - run: git submodule update --init --recursive
