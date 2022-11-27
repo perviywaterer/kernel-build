@@ -1,4 +1,4 @@
-cmd_scripts/kconfig/lxdialog/yesno.o := gcc -Wp,-MMD,scripts/kconfig/lxdialog/.yesno.o.d -Wall -Wmissing-prototypes -Wstrict-prototypes -O2 -fomit-frame-pointer -std=gnu89      -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -I/usr/include/ncursesw -c -o scripts/kconfig/lxdialog/yesno.o scripts/kconfig/lxdialog/yesno.c
+cmd_scripts/kconfig/lxdialog/yesno.o := clang -Wp,-MMD,scripts/kconfig/lxdialog/.yesno.o.d -Wall -Wmissing-prototypes -Wstrict-prototypes -O2 -fomit-frame-pointer -std=gnu89      -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -I/usr/include/ncursesw -c -o scripts/kconfig/lxdialog/yesno.o scripts/kconfig/lxdialog/yesno.c
 
 source_scripts/kconfig/lxdialog/yesno.o := scripts/kconfig/lxdialog/yesno.c
 
